@@ -1,0 +1,23 @@
+{% extends "xmin_base.html" %}
+
+{% block title %} Testbed {% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" type="text/css" href="/static/extjs-4/resources/css/ext-all-gray.css">
+    <link rel="stylesheet" type="text/css" href="/static/xmin/styles/xmin.css">
+{% endblock %}
+
+{% block content %}
+        Hello World!
+{% endblock %}
+
+{% block scripts %}
+    <script src="/jsi18n/"></script>
+    <!--<script src="/static/extjs-4/ext-all.js"></script>-->
+    <script src="/static/extjs-4/ext-all-debug.js"></script>
+    <script>
+        Ext.namespace('Xmin.settings');
+        Xmin.settings = {{ settings|safe }};
+    </script>
+    <script src="/static/xmin/app.js" type="text/javascript" ></script>
+{% endblock %}
